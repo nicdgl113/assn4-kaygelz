@@ -5,7 +5,9 @@
 
 "use strict";
 
-function checkout() {
+
+var myLink = document.getElementById("button");
+  function checkout() {
   var room1 = prompt("What is the room first room rate?"); // room rate 1
   var room2 = prompt("What is the second room rate?"); /// room rate 2
   var myArray = ["room1", "room2"]; ///array containg room rates
@@ -21,9 +23,26 @@ function checkout() {
   let str3 = `The total balance is$${Total}`;
   let ele = document.querySelector("main");
   // append the result to the current content in main
-  let htmlString = `${str1} (\n) ${str2} \n ${str3}`;
+  let htmlString = `${str1}  ${str2} ${str3}`;
   ele.innerHTML += htmlString;
-}
-///calculate
+  }
 
+   myLink.addEventListener ('click', checkout);
+
+
+  ///event handling delegation
+  let ele = document.querySelector('table');
+  ele.addEventListener ('click' )
+  
+
+
+
+///click event listener
+
+
+///function calls
 checkout();
+
+
+
+
