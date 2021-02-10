@@ -11,19 +11,19 @@ function printFooter() {
   let date = myDate.getDate();
   let month = myDate.getMonth();
   let year = myDate.getFullYear();
-  let str = `${date}/${month}/${year}`;
-  let ele = (document.getElementById(
-    "div1"
-  ).innerHTML = `Today's date is: ${str}`);
+  let htmlStr = "Today is:" + (month+1) + "/" + date +"/" + year;
+  let myFooter = document.querySelector("footer");
+  myFooter.innerHTML = htmlStr;
 
 }
 ///create image
-function myImg() {
-  let Int = Math.floor(Math.random() * 5); /// generate random integer
-  let str = "images/img" + Int + ".jpg"; /// add integer to image
-  return str; ///return string
+function randomImage() {
+  let int = Math.random() * 3;
+  int = Math.floor(int);
+  let imgStr = "images/img" + int + ".jpg";
+  return imgStr;
 }
 
 ///call functions
-myImg(); 
+randomImage(); 
 printFooter();

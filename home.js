@@ -4,11 +4,14 @@
 //assn:4
  
 ///functions
-function greeting() {
-    var guestName = prompt("Your name please?");
-    let str = `Welcome to the resort, ${guestName}.`;
-    document.write(str);
+function greeting(guestName = "guest") {
+    let htmlStr = "<p>Welcome, " + guestName + "!</p>";
+    let myMain = document.querySelector("main");
+    myMain.innerHTML += htmlStr;
+    
 }
 //call function
-greeting(); 
+///greeting(); 
+let guest = prompt("tell me your name please");
+greeting(guest);
 
