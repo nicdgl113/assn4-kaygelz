@@ -5,9 +5,8 @@
 
 "use strict";
 
-
 var myLink = document.getElementById("button");
-  function checkout() {
+function checkout() {
   var room1 = prompt("What is the room first room rate?"); // room rate 1
   var room2 = prompt("What is the second room rate?"); /// room rate 2
   var myArray = ["room1", "room2"]; ///array containg room rates
@@ -25,24 +24,33 @@ var myLink = document.getElementById("button");
   // append the result to the current content in main
   let htmlString = `${str1}  ${str2} ${str3}`;
   ele.innerHTML += htmlString;
-  }
+}
+///add event listener
+myLink.addEventListener ("click", checkout);
 
-   myLink.addEventListener ('click', checkout);
+///delegate event funtion
+function delegate(event) {
+  alert ("event occurred on" + onclick.th.tagName + "but handled by its parent" + this.tagName + );
+  e.target.className = "myClass";
 
 
-  ///event handling delegation
-  let ele = document.querySelector('table');
-  ele.addEventListener ('click' )
-  
+}
+
+let  th = document.querySelector("th");
+th.addEventListener ('click', setTargetProperty);
+
+function setTargetProperty(th) {
+  th.target.className = "setFont";
+}
+
+
+
 
 
 
 ///click event listener
 
-
 ///function calls
 checkout();
-
-
-
+delegate(event);
 
